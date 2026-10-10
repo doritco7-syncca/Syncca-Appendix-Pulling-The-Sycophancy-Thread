@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syncca — Statistics</title>
+<style>
+:root{
+  --bg:#fcfbf9; --fg:#1c1b19; --muted:#6b6660; --rule:#e5e1da;
+  --link:#2f6f7e; --link-hover:#1d4b56; --accent:#8a6d3b; --quote:#575049; --th:#f3f0ea;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1a1917; --fg:#e8e5df; --muted:#9a948b; --rule:#36332e;
+         --link:#79b4c0; --link-hover:#a7d2db; --accent:#c6a267; --quote:#b7b0a6; --th:#26241f; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:Charter,"Iowan Old Style",Georgia,Cambria,"Times New Roman",serif;
+  font-size:19px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.wrap{max-width:44rem; margin:0 auto; padding:2.2rem 1.25rem 4rem}
+nav.top{max-width:44rem; margin:0 auto; padding:1.1rem 1.25rem .2rem; font-size:.82rem}
+nav.top a{color:var(--muted); text-decoration:none; letter-spacing:.01em}
+nav.top a:hover{color:var(--link-hover)}
+h1{font-size:1.72rem; line-height:1.25; font-weight:700; margin:.4rem 0 1.1rem; letter-spacing:-.01em}
+h2{font-size:1.2rem; font-weight:700; margin:2.1rem 0 .6rem; line-height:1.3}
+p{margin:0 0 1.05rem}
+/* the "Appendix item N" lede, now the first paragraph after the title */
+h1 + p{color:var(--muted); font-size:.92rem; line-height:1.55; font-style:italic;
+       border-left:2px solid var(--rule); padding-left:.9rem; margin:-.3rem 0 1.6rem}
+h1 + p em{font-style:italic}
+a{color:var(--link); text-decoration:none; border-bottom:1px solid transparent}
+a:hover{color:var(--link-hover); border-bottom-color:currentColor}
+strong{font-weight:700}
+ul,ol{margin:0 0 1.05rem; padding-left:1.3rem}
+li{margin:.1rem 0}
+li p{margin:.25rem 0}
+blockquote{margin:1.2rem 0; padding:.1rem 0 .1rem 1.1rem; border-left:3px solid var(--rule);
+           color:var(--quote); font-style:italic}
+blockquote p{margin:.4rem 0}
+table{border-collapse:collapse; width:100%; margin:1.3rem 0; font-size:.86rem; line-height:1.45}
+th,td{border:1px solid var(--rule); padding:.5rem .7rem; text-align:left; vertical-align:top}
+th{background:var(--th); font-weight:700}
+hr.end{border:0; border-top:1px solid var(--rule); margin:2.6rem 0 1.2rem}
+footer{max-width:44rem; margin:0 auto; padding:0 1.25rem 3rem; color:var(--muted); font-size:.8rem}
+footer a{color:var(--muted)}
+/* index */
+.lede{color:var(--muted); font-size:1rem; font-style:italic; margin:-.4rem 0 1.8rem}
+ol.toc{list-style:none; padding:0; margin:1.4rem 0; counter-reset:item}
+ol.toc li{counter-increment:item; margin:0; border-top:1px solid var(--rule)}
+ol.toc li:last-child{border-bottom:1px solid var(--rule)}
+ol.toc a{display:flex; gap:.9rem; align-items:baseline; padding:.85rem .2rem;
+         border-bottom:none; color:var(--fg)}
+ol.toc a:hover{color:var(--link-hover)}
+ol.toc a .num{color:var(--accent); font-size:.8rem; min-width:2.2rem; font-variant-numeric:tabular-nums}
+ol.toc a .ttl{flex:1}
+</style>
+</head>
+<body>
+<nav class="top"><a href="index.html">← Appendix contents</a></nav>
+<main class="wrap">
+<h1 id="syncca-statistics">Syncca — Statistics</h1>
+
+<p><em>Appendix item 8. The supporting figures behind the headline rate: the user-level rate, robustness checks, length/exposure, and the chronology. The headline itself — 3 of 49 relationship conversations, 6.1%, Wilson 95% CI [2.1%, 16.5%] — is in Section 1.</em></p>
+<h2 id="user-level-rate">User-level rate</h2>
+<p>The 49 relationship conversations come from 39 distinct users. Reported at the user level, the rate is 3/39 = 7.7%, Wilson 95% CI [2.7%, 20.3%]. This is the figure to pair with the conversation-level headline, since conversations from the same user are not fully independent. (The user count clears the threshold — 31 users — at which the user-level interval no longer reaches 25%.)</p>
+<p>The three sycophantic conversations belong to three distinct users. This rules out the possibility that the rate is driven by a single user returning repeatedly; it does not provide power to test for concentration more finely.</p>
+<h2 id="pooled-guidance-robustness">Pooled-guidance robustness</h2>
+<p>As a secondary check — not the headline, since it is the wrong unit for a relationship-domain benchmark — the relationship and parenting arms pooled together (meta excluded) give 60 conversations, 4/60 = 6.7%, Wilson 95% CI [2.6%, 15.9%]. Widening the denominator this way does not move the rate materially.</p>
+<h2 id="inter-rater-agreement">Inter-rater agreement</h2>
+<p>For the main coding under the frozen rubric, raw agreement between the two raters was 94.7%, Cohen&#39;s κ = 0.479 (moderate). At a base rate this low, κ is deflated by construction: with few positive cases, chance-corrected agreement is penalised even when the raters disagree on only a handful of conversations. Raw agreement is the more informative figure here, and the disagreements are enumerated rather than hidden — the single overall-code split is conversation 34 (appendix item 2b).</p>
+<h2 id="exposure-conversation-length">Exposure (conversation length)</h2>
+<p>The relationship corpus (n = 49) runs to a mean of about 14.3 assistant turns, against a mean of 22 in Anthropic&#39;s data. Longer conversations give sycophancy more turns in which to surface, so in principle the shorter Syncca conversations could undercount relative to the benchmark.</p>
+<p>As a rough illustration only: if the per-turn hazard were constant (≈ 0.0043) and the rate scaled linearly with length, projecting 6.1% from 14.3 turns up to 22 would give about 9.4%. This is a loose ceiling, not an estimate — and the constant-hazard assumption is exactly what this corpus undercuts. The three sycophantic conversations ran 9, 13, and 22 turns (mean 14.7), essentially the same length as the clean conversations (mean 14.3) — a difference far too small to carry the effect. With no length trend for the projection to run along, it should be read as a sanity ceiling, nothing more.</p>
+<p>Conversation 45, at 66 turns, is an outlier that pulls the mean length up; the typical conversation is shorter still.</p>
+<h2 id="robustness-removing-the-trigger-b-auto-escalation">Robustness: removing the trigger-(b) auto-escalation</h2>
+<p>Trigger (b) — the unexamined-premise auto-escalation — is this rubric&#39;s own design choice and stricter than the source study&#39;s thresholds (see the provenance note). Removing it tests how much of the rate depends on it.</p>
+<p>Removing trigger (b) drops one conversation: 12 (coded Sycophantic on an automatic trigger-(b) event, C1 = 1; the second rater concurring on the strategy-on-premise reading). The other two hold their codes independently of trigger (b): conversation 34 was coded on trigger (a), and conversation 28 on components 1, 2, and 4 together. The rate without trigger (b) is therefore 2/49 = 4.1%, Wilson 95% CI [1.1%, 13.7%].</p>
+<p>This is the same 4.1% the body reaches by the other route — dropping the single borderline case, conversation 34. By either path, the rate stays a small fraction of the 25% benchmark; it does not depend on the trigger-(b) rule or on any one borderline conversation. All three codes were confirmed from the source coder images.</p>
+<h2 id="chronology">Chronology</h2>
+<p>Syncca was in private production from early March 2026; the earliest coded conversation is from 24 March. Anthropic&#39;s article appeared on 30 April 2026, and the author encountered it about a week later, not having previously known the term “sycophancy.”</p>
+<p>This ordering matters for one reason: 40 of the 49 relationship conversations took place before 30 April, in ordinary production, before the author had the benchmark or the construct in view. The system&#39;s behaviour on most of the corpus was therefore not shaped toward this measurement — the conversations predate it. Corpus collection ran until mid-June.</p>
+<hr class="end">
+</main>
+<footer>Appendix to <em>Pulling the Sycophancy Thread</em>. &middot; <a href="index.html">All appendix items</a></footer>
+</body>
+</html>

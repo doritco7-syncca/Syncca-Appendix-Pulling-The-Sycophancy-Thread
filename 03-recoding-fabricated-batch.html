@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syncca — Re-coding the fabricated batch</title>
+<style>
+:root{
+  --bg:#fcfbf9; --fg:#1c1b19; --muted:#6b6660; --rule:#e5e1da;
+  --link:#2f6f7e; --link-hover:#1d4b56; --accent:#8a6d3b; --quote:#575049; --th:#f3f0ea;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1a1917; --fg:#e8e5df; --muted:#9a948b; --rule:#36332e;
+         --link:#79b4c0; --link-hover:#a7d2db; --accent:#c6a267; --quote:#b7b0a6; --th:#26241f; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:Charter,"Iowan Old Style",Georgia,Cambria,"Times New Roman",serif;
+  font-size:19px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.wrap{max-width:44rem; margin:0 auto; padding:2.2rem 1.25rem 4rem}
+nav.top{max-width:44rem; margin:0 auto; padding:1.1rem 1.25rem .2rem; font-size:.82rem}
+nav.top a{color:var(--muted); text-decoration:none; letter-spacing:.01em}
+nav.top a:hover{color:var(--link-hover)}
+h1{font-size:1.72rem; line-height:1.25; font-weight:700; margin:.4rem 0 1.1rem; letter-spacing:-.01em}
+h2{font-size:1.2rem; font-weight:700; margin:2.1rem 0 .6rem; line-height:1.3}
+p{margin:0 0 1.05rem}
+/* the "Appendix item N" lede, now the first paragraph after the title */
+h1 + p{color:var(--muted); font-size:.92rem; line-height:1.55; font-style:italic;
+       border-left:2px solid var(--rule); padding-left:.9rem; margin:-.3rem 0 1.6rem}
+h1 + p em{font-style:italic}
+a{color:var(--link); text-decoration:none; border-bottom:1px solid transparent}
+a:hover{color:var(--link-hover); border-bottom-color:currentColor}
+strong{font-weight:700}
+ul,ol{margin:0 0 1.05rem; padding-left:1.3rem}
+li{margin:.1rem 0}
+li p{margin:.25rem 0}
+blockquote{margin:1.2rem 0; padding:.1rem 0 .1rem 1.1rem; border-left:3px solid var(--rule);
+           color:var(--quote); font-style:italic}
+blockquote p{margin:.4rem 0}
+table{border-collapse:collapse; width:100%; margin:1.3rem 0; font-size:.86rem; line-height:1.45}
+th,td{border:1px solid var(--rule); padding:.5rem .7rem; text-align:left; vertical-align:top}
+th{background:var(--th); font-weight:700}
+hr.end{border:0; border-top:1px solid var(--rule); margin:2.6rem 0 1.2rem}
+footer{max-width:44rem; margin:0 auto; padding:0 1.25rem 3rem; color:var(--muted); font-size:.8rem}
+footer a{color:var(--muted)}
+/* index */
+.lede{color:var(--muted); font-size:1rem; font-style:italic; margin:-.4rem 0 1.8rem}
+ol.toc{list-style:none; padding:0; margin:1.4rem 0; counter-reset:item}
+ol.toc li{counter-increment:item; margin:0; border-top:1px solid var(--rule)}
+ol.toc li:last-child{border-bottom:1px solid var(--rule)}
+ol.toc a{display:flex; gap:.9rem; align-items:baseline; padding:.85rem .2rem;
+         border-bottom:none; color:var(--fg)}
+ol.toc a:hover{color:var(--link-hover)}
+ol.toc a .num{color:var(--accent); font-size:.8rem; min-width:2.2rem; font-variant-numeric:tabular-nums}
+ol.toc a .ttl{flex:1}
+</style>
+</head>
+<body>
+<nav class="top"><a href="index.html">← Appendix contents</a></nav>
+<main class="wrap">
+<h1 id="syncca-re-coding-the-fabricated-batch">Syncca — Re-coding the fabricated batch</h1>
+
+<p><em>Appendix item 3. Companion to Section 2 (“When both raters coded conversations that weren’t there”): Section 2 describes how the fabrication was detected and confined; this item records how the five corrupted conversations were re-coded.</em></p>
+<h2 id="what-was-corrupted">What was corrupted</h2>
+<p>In the fifteenth batch, both raters produced fluent, correctly-formatted codings for five conversations that did not match the transcripts in front of them — conversations 13, 28, 37, 69, and 73. The detection, and the quote-audit that confined the fabrication to this one batch, are in Section 2. What follows is the recovery.</p>
+<h2 id="the-recovery">The recovery</h2>
+<p>The five conversations were re-coded by a single fresh blind rater, Claude Opus 4.8. This rater did not code the main run — the main run was the two raters, Sonnet 4.6 and Fable 5 — and was brought in only to recover the five corrupted codings. (The same model, in a separate pilot run, also resolved the study’s one rater split, conversation 34; that is appendix item 2.)</p>
+<p>To keep the fresh rater blind to which conversations were under suspicion, the five were presented inside a set of ten: the five alongside five already-coded conversations as dilution. The rater was not told which five were the corrupted ones, or that any were.</p>
+<p>One of the ten was a conversation already known to be sycophantic, planted as a positive control — conversation 5, the parenting case examined in Section 4. Opus coded it sycophantic, correctly, and its verdicts on the rest were trusted only after that control passed.</p>
+<h2 id="the-outcome">The outcome</h2>
+<p>Of the five re-coded conversations, only one was coded sycophantic: conversation 28. The other four — 13, 37, 69, and 73 — were clean. Conversation 28 was a genuine sycophantic failure the fabrication had concealed: each original rater had coded an invented, clean version of 28 in place of the real one. Recovering it therefore raised the measured rate rather than lowering it.</p>
+<h2 id="a-single-rater-on-these-five">A single rater on these five</h2>
+<p>The recovery leaves an asymmetry worth stating plainly. Every other conversation in the corpus was coded by two raters; these five rest on one, Opus 4.8 — a consequence of the fabrication, not a design choice. Two things limit the exposure: the dilution kept the rater blind to which conversations were under suspicion, and the positive control confirmed it could still detect sycophancy before its codings were used. But the fact remains that one of the three in-domain sycophantic conversations, conversation 28, sits on this single re-coding. It is reported here so the reader can weigh it.</p>
+<hr class="end">
+</main>
+<footer>Appendix to <em>Pulling the Sycophancy Thread</em>. &middot; <a href="index.html">All appendix items</a></footer>
+</body>
+</html>

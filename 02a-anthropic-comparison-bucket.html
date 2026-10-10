@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syncca — The Anthropic comparison bucket</title>
+<style>
+:root{
+  --bg:#fcfbf9; --fg:#1c1b19; --muted:#6b6660; --rule:#e5e1da;
+  --link:#2f6f7e; --link-hover:#1d4b56; --accent:#8a6d3b; --quote:#575049; --th:#f3f0ea;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1a1917; --fg:#e8e5df; --muted:#9a948b; --rule:#36332e;
+         --link:#79b4c0; --link-hover:#a7d2db; --accent:#c6a267; --quote:#b7b0a6; --th:#26241f; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:Charter,"Iowan Old Style",Georgia,Cambria,"Times New Roman",serif;
+  font-size:19px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.wrap{max-width:44rem; margin:0 auto; padding:2.2rem 1.25rem 4rem}
+nav.top{max-width:44rem; margin:0 auto; padding:1.1rem 1.25rem .2rem; font-size:.82rem}
+nav.top a{color:var(--muted); text-decoration:none; letter-spacing:.01em}
+nav.top a:hover{color:var(--link-hover)}
+h1{font-size:1.72rem; line-height:1.25; font-weight:700; margin:.4rem 0 1.1rem; letter-spacing:-.01em}
+h2{font-size:1.2rem; font-weight:700; margin:2.1rem 0 .6rem; line-height:1.3}
+p{margin:0 0 1.05rem}
+/* the "Appendix item N" lede, now the first paragraph after the title */
+h1 + p{color:var(--muted); font-size:.92rem; line-height:1.55; font-style:italic;
+       border-left:2px solid var(--rule); padding-left:.9rem; margin:-.3rem 0 1.6rem}
+h1 + p em{font-style:italic}
+a{color:var(--link); text-decoration:none; border-bottom:1px solid transparent}
+a:hover{color:var(--link-hover); border-bottom-color:currentColor}
+strong{font-weight:700}
+ul,ol{margin:0 0 1.05rem; padding-left:1.3rem}
+li{margin:.1rem 0}
+li p{margin:.25rem 0}
+blockquote{margin:1.2rem 0; padding:.1rem 0 .1rem 1.1rem; border-left:3px solid var(--rule);
+           color:var(--quote); font-style:italic}
+blockquote p{margin:.4rem 0}
+table{border-collapse:collapse; width:100%; margin:1.3rem 0; font-size:.86rem; line-height:1.45}
+th,td{border:1px solid var(--rule); padding:.5rem .7rem; text-align:left; vertical-align:top}
+th{background:var(--th); font-weight:700}
+hr.end{border:0; border-top:1px solid var(--rule); margin:2.6rem 0 1.2rem}
+footer{max-width:44rem; margin:0 auto; padding:0 1.25rem 3rem; color:var(--muted); font-size:.8rem}
+footer a{color:var(--muted)}
+/* index */
+.lede{color:var(--muted); font-size:1rem; font-style:italic; margin:-.4rem 0 1.8rem}
+ol.toc{list-style:none; padding:0; margin:1.4rem 0; counter-reset:item}
+ol.toc li{counter-increment:item; margin:0; border-top:1px solid var(--rule)}
+ol.toc li:last-child{border-bottom:1px solid var(--rule)}
+ol.toc a{display:flex; gap:.9rem; align-items:baseline; padding:.85rem .2rem;
+         border-bottom:none; color:var(--fg)}
+ol.toc a:hover{color:var(--link-hover)}
+ol.toc a .num{color:var(--accent); font-size:.8rem; min-width:2.2rem; font-variant-numeric:tabular-nums}
+ol.toc a .ttl{flex:1}
+</style>
+</head>
+<body>
+<nav class="top"><a href="index.html">← Appendix contents</a></nav>
+<main class="wrap">
+<h1 id="syncca-the-anthropic-comparison-bucket">Syncca — The Anthropic comparison bucket</h1>
+
+<p><em>Appendix item 2a. Expands the caveat flagged in Section 1: the headline rate is set against a benchmark figure, not produced by a controlled head-to-head, and the two “relationship” buckets are referenced to each other rather than identical.</em></p>
+<p>The 25% this study compares against is Anthropic’s reported sycophancy rate for its relationships guidance domain (Anthropic, 30 April 2026). Several features of that bucket bear on how much weight the comparison can carry.</p>
+<h2 id="where-the-25-comes-from">Where the 25% comes from</h2>
+<p>Anthropic drew a random sample of one million claude.ai conversations from March–April 2026, filtered to unique users (about 639,000), and classified roughly 38,000 as personal guidance. Relationships was one guidance domain among several — about 12% of 37,657 guidance-seeking conversations. Its sycophancy rate was 25%; across all guidance domains together the rate was 9%.</p>
+<h2 id="what-the-bucket-contains">What the bucket contains</h2>
+<p>Anthropic’s relationship domain spans communication in current relationships, initiating romantic interests, and leaving abusive or troubled relationships. Where a conversation touched more than one domain, it was assigned to its single most prominent topic — the same tie-break this study uses.</p>
+<h2 id="how-it-lines-up-with-the-49">How it lines up with the 49</h2>
+<ul><li><p>Anthropic’s own taxonomy separates relationships from parenting as distinct domains. Excluding parenting from this study’s relationship arm therefore mirrors Anthropic’s split; it is not a line drawn for this study’s convenience.</p></li><li><p>The tie-break rule is shared.</p></li><li><p>The exact boundary is this study’s own: relationship here means every relational conversation except guidance on raising one’s own minor child — couples, but also adult children, extended family, and friends. That is broader than the current-partner-and-romantic emphasis Anthropic’s descriptors suggest.</p></li></ul>
+<h2 id="why-this-is-a-benchmark-reference-not-a-controlled-comparison">Why this is a benchmark reference, not a controlled comparison</h2>
+<p>Anthropic’s rate was produced by a different classifier (Claude Sonnet 4.5), on broad, English-dominant claude.ai traffic, under a severity threshold Anthropic has not published. This study’s rate was produced by two different raters, on a small, Hebrew-dominant corpus, under a frozen rubric with a disclosed trigger mechanism. The two numbers are referenced to each other; they are not one controlled measurement applied to both systems. The comparison speaks to order of magnitude, not to a precise multiple.</p>
+<hr class="end">
+</main>
+<footer>Appendix to <em>Pulling the Sycophancy Thread</em>. &middot; <a href="index.html">All appendix items</a></footer>
+</body>
+</html>

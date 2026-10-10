@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syncca — The corpus and the domain rules</title>
+<style>
+:root{
+  --bg:#fcfbf9; --fg:#1c1b19; --muted:#6b6660; --rule:#e5e1da;
+  --link:#2f6f7e; --link-hover:#1d4b56; --accent:#8a6d3b; --quote:#575049; --th:#f3f0ea;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1a1917; --fg:#e8e5df; --muted:#9a948b; --rule:#36332e;
+         --link:#79b4c0; --link-hover:#a7d2db; --accent:#c6a267; --quote:#b7b0a6; --th:#26241f; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:Charter,"Iowan Old Style",Georgia,Cambria,"Times New Roman",serif;
+  font-size:19px; line-height:1.65;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.wrap{max-width:44rem; margin:0 auto; padding:2.2rem 1.25rem 4rem}
+nav.top{max-width:44rem; margin:0 auto; padding:1.1rem 1.25rem .2rem; font-size:.82rem}
+nav.top a{color:var(--muted); text-decoration:none; letter-spacing:.01em}
+nav.top a:hover{color:var(--link-hover)}
+h1{font-size:1.72rem; line-height:1.25; font-weight:700; margin:.4rem 0 1.1rem; letter-spacing:-.01em}
+h2{font-size:1.2rem; font-weight:700; margin:2.1rem 0 .6rem; line-height:1.3}
+p{margin:0 0 1.05rem}
+/* the "Appendix item N" lede, now the first paragraph after the title */
+h1 + p{color:var(--muted); font-size:.92rem; line-height:1.55; font-style:italic;
+       border-left:2px solid var(--rule); padding-left:.9rem; margin:-.3rem 0 1.6rem}
+h1 + p em{font-style:italic}
+a{color:var(--link); text-decoration:none; border-bottom:1px solid transparent}
+a:hover{color:var(--link-hover); border-bottom-color:currentColor}
+strong{font-weight:700}
+ul,ol{margin:0 0 1.05rem; padding-left:1.3rem}
+li{margin:.1rem 0}
+li p{margin:.25rem 0}
+blockquote{margin:1.2rem 0; padding:.1rem 0 .1rem 1.1rem; border-left:3px solid var(--rule);
+           color:var(--quote); font-style:italic}
+blockquote p{margin:.4rem 0}
+table{border-collapse:collapse; width:100%; margin:1.3rem 0; font-size:.86rem; line-height:1.45}
+th,td{border:1px solid var(--rule); padding:.5rem .7rem; text-align:left; vertical-align:top}
+th{background:var(--th); font-weight:700}
+hr.end{border:0; border-top:1px solid var(--rule); margin:2.6rem 0 1.2rem}
+footer{max-width:44rem; margin:0 auto; padding:0 1.25rem 3rem; color:var(--muted); font-size:.8rem}
+footer a{color:var(--muted)}
+/* index */
+.lede{color:var(--muted); font-size:1rem; font-style:italic; margin:-.4rem 0 1.8rem}
+ol.toc{list-style:none; padding:0; margin:1.4rem 0; counter-reset:item}
+ol.toc li{counter-increment:item; margin:0; border-top:1px solid var(--rule)}
+ol.toc li:last-child{border-bottom:1px solid var(--rule)}
+ol.toc a{display:flex; gap:.9rem; align-items:baseline; padding:.85rem .2rem;
+         border-bottom:none; color:var(--fg)}
+ol.toc a:hover{color:var(--link-hover)}
+ol.toc a .num{color:var(--accent); font-size:.8rem; min-width:2.2rem; font-variant-numeric:tabular-nums}
+ol.toc a .ttl{flex:1}
+</style>
+</head>
+<body>
+<nav class="top"><a href="index.html">← Appendix contents</a></nav>
+<main class="wrap">
+<h1 id="syncca-the-corpus-and-the-domain-rules">Syncca — The corpus and the domain rules</h1>
+
+<p><em>Appendix item 1.</em></p>
+<h2 id="the-75-conversations">The 75 conversations</h2>
+<p>The full coded corpus was 75 conversations: 67 from Syncca, plus 8 simulated baseline-Claude conversations built for this study as blinding filler, so that raters coding blind could not sort transcripts by source. The 8 are excluded from every reported denominator.</p>
+<p>The 67 Syncca conversations divide by domain into 6 meta-conversations (about the system itself), 12 parenting conversations, and 49 relationship conversations. The headline rate is computed on the 49.</p>
+<h2 id="the-domain-split">The domain split</h2>
+<p>The split between the two guidance domains uses the same tie-break rule as the benchmark — each conversation assigned to its single most prominent topic — but the boundary between them is this study’s own: parenting means guidance on raising one’s own minor child, and relationship covers every other relational conversation — couples, along with adult children, extended family, and friends. This is a broader use of “relationship” than the couples-only reading the English word invites, and it is the denominator the headline rate is computed on: 49.</p>
+<p>The domain boundary is a content criterion, fixed by subject before coding, not by how any conversation was later judged. Exactly one sycophantic conversation falls outside the 49 — conversation 5, in the parenting domain — examined in full in Section 4 rather than set aside; no other conversation outside the 49 was coded sycophantic.</p>
+<p>Each conversation’s domain assignment was checked by hand against both the original Airtable table (identifying details intact) and the cleaned table, so that no conversation landed in the wrong domain as a side effect of cleaning.</p>
+<h2 id="selection">Selection</h2>
+<p>Within the relationship arm, selection was every Syncca production conversation in the period that met the cleaning criteria. The one exclusion was sessions too short to code — where a user opened a conversation and did not continue, though the session was still logged. No conversation was excluded on any other ground.</p>
+<hr class="end">
+</main>
+<footer>Appendix to <em>Pulling the Sycophancy Thread</em>. &middot; <a href="index.html">All appendix items</a></footer>
+</body>
+</html>
